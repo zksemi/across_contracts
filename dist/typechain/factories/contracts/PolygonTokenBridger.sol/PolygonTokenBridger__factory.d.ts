@@ -1,0 +1,155 @@
+import { Signer, ContractFactory, BigNumberish, Overrides } from "ethers";
+import type { Provider, TransactionRequest } from "@ethersproject/providers";
+import type { PolygonTokenBridger, PolygonTokenBridgerInterface } from "../../../contracts/PolygonTokenBridger.sol/PolygonTokenBridger";
+declare type PolygonTokenBridgerConstructorParams = [signer?: Signer] | ConstructorParameters<typeof ContractFactory>;
+export declare class PolygonTokenBridger__factory extends ContractFactory {
+    constructor(...args: PolygonTokenBridgerConstructorParams);
+    deploy(_destination: string, _l1PolygonRegistry: string, _l1Weth: string, _l2WrappedMatic: string, _l1ChainId: BigNumberish, _l2ChainId: BigNumberish, overrides?: Overrides & {
+        from?: string;
+    }): Promise<PolygonTokenBridger>;
+    getDeployTransaction(_destination: string, _l1PolygonRegistry: string, _l1Weth: string, _l2WrappedMatic: string, _l1ChainId: BigNumberish, _l2ChainId: BigNumberish, overrides?: Overrides & {
+        from?: string;
+    }): TransactionRequest;
+    attach(address: string): PolygonTokenBridger;
+    connect(signer: Signer): PolygonTokenBridger__factory;
+    static readonly bytecode = "0x6101403461011957601f610e3338819003918201601f19168301916001600160401b0383118484101761011d5780849260c0946040528339810103126101195761004881610131565b60208201516001600160a01b03808216820361011957604084015190811681036101195761007860608501610131565b9160a0608086015195015193600160ff195f5416175f5560805260a05260c05260e05261010091825261012090815260405190610ced9283610146843960805183818161040e01526109c7015260a05183818161055601526106e5015260c0518381816107fe0152610931015260e05183818161029d01526107540152518281816104ef01528181610858015261090701525181818160d201526101830152f35b5f80fd5b634e487b7160e01b5f52604160045260245ffd5b51906001600160a01b03821682036101195756fe6080604081815260049182361015610021575b505050361561001f575f80fd5b005b5f925f3560e01c9182630a79309b1461087b5750816312622e5b14610822578163146bf4b1146107b357816315b550d61461077857816344516d861461070957816368f382481461069a5781637ffae68814610432578163b269681d146103c3578163d0679d34146100f9575063d6ae3cd51461009e5780610012565b346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f557602090517f00000000000000000000000000000000000000000000000000000000000000008152f35b5080fd5b839150346100f557827ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f55780359273ffffffffffffffffffffffffffffffffffffffff908185168095036103bf57602460ff855416156103bb577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0093845f54165f557f000000000000000000000000000000000000000000000000000000000000000046036103b7578251967f23b872dd0000000000000000000000000000000000000000000000000000000060208901523383890152306044890152823560648901526064885260a0880188811067ffffffffffffffff82111761038c57879861020f91869998995282610bb6565b8351947f70a0823100000000000000000000000000000000000000000000000000000000865230838701526020868581855afa958615610382578796610347575b50813b156103395784517f2e1a7d4d0000000000000000000000000000000000000000000000000000000096878252848201528781868183875af1801561033d57908891610325575b50507f000000000000000000000000000000000000000000000000000000000000000016146102d0575b846001875f5416175f5580f35b4791479461101093843b156103215787948651978895869485528401525af19081156103185750610304575b8080806102c3565b61030d90610afa565b6100f55781836102fc565b513d84823e3d90fd5b8780fd5b61032e90610afa565b61033957868a610299565b8680fd5b86513d8a823e3d90fd5b965094506020863d60201161037a575b8161036460209383610b3b565b81010312610376578795519489610250565b5f80fd5b3d9150610357565b85513d89823e3d90fd5b836041847f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b8580fd5b8480fd5b8380fd5b5050346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f5576020905173ffffffffffffffffffffffffffffffffffffffff7f0000000000000000000000000000000000000000000000000000000000000000168152f35b90503461069657602091827ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126103bf5781359267ffffffffffffffff84116103bb57366023850112156103bb5784848401359461049186610b7c565b9561049e85519788610b3b565b808752366024828401011161069657806024859301838901378601015260ff855416156103bb577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0093845f54165f557f000000000000000000000000000000000000000000000000000000000000000046036103b75773ffffffffffffffffffffffffffffffffffffffff83517fb6864976000000000000000000000000000000000000000000000000000000008152838187818b867f0000000000000000000000000000000000000000000000000000000000000000165af190811561068c578891610656575b501691823b1561033957908184939288969551957f7c5264b4000000000000000000000000000000000000000000000000000000008752860152815191826024870152865b83811061063f57505050849184836044827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f878585859a86010152011681010301925af1908115610318575061062b575b506001825f5416175f5580f35b61063490610afa565b6100f557815f61061e565b8181018301518188016044015289975082016105cb565b90508381813d8311610685575b61066d8183610b3b565b8101031261032157518181168103610321575f610586565b503d610663565b85513d8a823e3d90fd5b8280fd5b5050346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f5576020905173ffffffffffffffffffffffffffffffffffffffff7f0000000000000000000000000000000000000000000000000000000000000000168152f35b5050346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f5576020905173ffffffffffffffffffffffffffffffffffffffff7f0000000000000000000000000000000000000000000000000000000000000000168152f35b5050346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f557602090516110108152f35b5050346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f5576020905173ffffffffffffffffffffffffffffffffffffffff7f0000000000000000000000000000000000000000000000000000000000000000168152f35b5050346100f557817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126100f557602090517f00000000000000000000000000000000000000000000000000000000000000008152f35b8491843461037657602091827ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126103765780359173ffffffffffffffffffffffffffffffffffffffff9485841695868503610376575f549660ff881615610376577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff008098165f557f00000000000000000000000000000000000000000000000000000000000000004603610376578690827f00000000000000000000000000000000000000000000000000000000000000001693848214610a8a575b50602493508451938480927f70a0823100000000000000000000000000000000000000000000000000000000825230898301525afa918215610a80578892610a51575b507fa9059cbb000000000000000000000000000000000000000000000000000000008351968701527f0000000000000000000000000000000000000000000000000000000000000000166024860152604485015260448452608084019184831067ffffffffffffffff841117610a2557505260019291610a1c91610bb6565b5f5416175f5580f35b6041907f4e487b71000000000000000000000000000000000000000000000000000000005f525260245ffd5b9091508581813d8311610a79575b610a698183610b3b565b810103126103765751908861099d565b503d610a5f565b83513d8a823e3d90fd5b915091924790803b156103765786835f9381937fd0e30db00000000000000000000000000000000000000000000000000000000083525af18015610af057610ad6575b8291879161095a565b602492919850610ae590610afa565b855f98919250610acd565b84513d5f823e3d90fd5b67ffffffffffffffff8111610b0e57604052565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b90601f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0910116810190811067ffffffffffffffff821117610b0e57604052565b67ffffffffffffffff8111610b0e57601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe01660200190565b73ffffffffffffffffffffffffffffffffffffffff169060405191604083019183831067ffffffffffffffff841117610b0e575f8091610c52946040527f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564602087818099520152858151910182855af13d15610c8a573d91610c3783610b7c565b92610c456040519485610b3b565b83523d5f8685013e610c8e565b8051918215918215610c6a575b505090501561037657565b809250819381010312610376570151801515810361037657805f80610c5f565b6060915b9015610ca857815115610c9f575090565b3b156103765790565b50805190811561037657602001fdfea2646970667358221220dc3ba90ddd6f94697ab32680a95f37d910c6494cb38816303357345926ffe90664736f6c63430008170033";
+    static readonly abi: readonly [{
+        readonly inputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "_destination";
+            readonly type: "address";
+        }, {
+            readonly internalType: "contract PolygonRegistry";
+            readonly name: "_l1PolygonRegistry";
+            readonly type: "address";
+        }, {
+            readonly internalType: "contract WETH9Interface";
+            readonly name: "_l1Weth";
+            readonly type: "address";
+        }, {
+            readonly internalType: "address";
+            readonly name: "_l2WrappedMatic";
+            readonly type: "address";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "_l1ChainId";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "_l2ChainId";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "nonpayable";
+        readonly type: "constructor";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "MATIC";
+        readonly outputs: readonly [{
+            readonly internalType: "contract MaticToken";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "bytes";
+            readonly name: "data";
+            readonly type: "bytes";
+        }];
+        readonly name: "callExit";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "destination";
+        readonly outputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l1ChainId";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l1PolygonRegistry";
+        readonly outputs: readonly [{
+            readonly internalType: "contract PolygonRegistry";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l1Weth";
+        readonly outputs: readonly [{
+            readonly internalType: "contract WETH9Interface";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l2ChainId";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l2WrappedMatic";
+        readonly outputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "contract IERC20Upgradeable";
+            readonly name: "token";
+            readonly type: "address";
+        }];
+        readonly name: "retrieve";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "contract PolygonIERC20Upgradeable";
+            readonly name: "token";
+            readonly type: "address";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "amount";
+            readonly type: "uint256";
+        }];
+        readonly name: "send";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly stateMutability: "payable";
+        readonly type: "receive";
+    }];
+    static createInterface(): PolygonTokenBridgerInterface;
+    static connect(address: string, signerOrProvider: Signer | Provider): PolygonTokenBridger;
+}
+export {};

@@ -1,0 +1,198 @@
+import { Signer, ContractFactory, Overrides } from "ethers";
+import type { Provider, TransactionRequest } from "@ethersproject/providers";
+import type { ZkSync_Adapter, ZkSync_AdapterInterface } from "../../../../contracts/chain-adapters/ZkSync_Adapter.sol/ZkSync_Adapter";
+declare type ZkSync_AdapterConstructorParams = [signer?: Signer] | ConstructorParameters<typeof ContractFactory>;
+export declare class ZkSync_Adapter__factory extends ContractFactory {
+    constructor(...args: ZkSync_AdapterConstructorParams);
+    deploy(_l1Weth: string, _l2RefundAddress: string, overrides?: Overrides & {
+        from?: string;
+    }): Promise<ZkSync_Adapter>;
+    getDeployTransaction(_l1Weth: string, _l2RefundAddress: string, overrides?: Overrides & {
+        from?: string;
+    }): TransactionRequest;
+    attach(address: string): ZkSync_Adapter;
+    connect(signer: Signer): ZkSync_Adapter__factory;
+    static readonly bytecode = "0x60c0346100a157601f610ea938819003918201601f19168301916001600160401b038311848410176100a55780849260409485528339810103126100a15780516001600160a01b039182821682036100a1576020015191821682036100a15760a052608052604051610def90816100ba82396080518181816101be0152818161037c0152818161058b0152610899015260a0518181816104990152610a3c0152f35b5f80fd5b634e487b7160e01b5f52604160045260245ffdfe604060808152600480361015610013575f80fd5b5f915f3560e01c806308f1ed1514610a60578063146bf4b1146109f257806352c8c75c146104175780635e743ef7146103db5780636c9075b7146103a05780638446ec8114610331578063bb3e04b5146102e0578063c9f5a053146102db578063cdc2b148146102db5763e6eb8ade1461008b575f80fd5b7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc81813601126102d7576100bd610aa1565b916024359367ffffffffffffffff85116102d357366023860112156102d3578481013593866100eb86610b7e565b966100f885519889610b10565b86885260209636602482840101116102cf57806024899301838b013788010152610120610bb8565b908147106102ba578591878961019b936101bb61013b610c97565b9989519a8b97889687967feb67241900000000000000000000000000000000000000000000000000000000885273ffffffffffffffffffffffffffffffffffffffff809716809d890152602488015260e0604488015260e4870190610cba565b91621e8480606487015261032060848701528583030160a4860152610d16565b907f00000000000000000000000000000000000000000000000000000000000000001660c483015203917332400084c286cf3e17e7b677ea9583e60a0003245af19283156102c5578693610272575b507f82e577407245f8e8c446b39602dae3fffacbc21172a51c88525e050063929b2f947f9e6c52944e331ba6270e7fe4cea2a4086bae8f7a27e1cdba07f416806f5d0ac49161026784519283928352858884015285830190610cba565b0390a151908152a180f35b9092508381813d83116102be575b61028a8183610b10565b810103126102ba5751917f82e577407245f8e8c446b39602dae3fffacbc21172a51c88525e050063929b2f61020a565b5f80fd5b503d610280565b82513d88823e3d90fd5b8280fd5b8580fd5b8380fd5b610ac4565b83823461032d57817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261032d57602090517357891966931eb4bb6fb81430e6ce0a03aabde0638152f35b5080fd5b83823461032d57817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261032d576020905173ffffffffffffffffffffffffffffffffffffffff7f0000000000000000000000000000000000000000000000000000000000000000168152f35b83823461032d57817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261032d57602090516103208152f35b83823461032d57817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261032d5760209051621e84808152f35b509060807ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126102ba5761044b610aa1565b91602480359273ffffffffffffffffffffffffffffffffffffffff918285168095036102ba576044803592606435948086168096036102ba5761048c610bb8565b8047106102ba57988116987f000000000000000000000000000000000000000000000000000000000000000082168a810361070457803b156102ba575f8091878b51809481937f2e1a7d4d0000000000000000000000000000000000000000000000000000000083528c8a8401525af180156106fa576106a5575b50859492602094926105888a8e60e06105218b8e98610c5d565b9761052a610c97565b93519b8c9a8b998a997feb672419000000000000000000000000000000000000000000000000000000008b528a015288015286015260e4850152621e84806064850152610320608485015261010060a4850152610104840190610d16565b907f00000000000000000000000000000000000000000000000000000000000000001660c483015203917332400084c286cf3e17e7b677ea9583e60a0003245af190811561069b578791610641575b507f82e577407245f8e8c446b39602dae3fffacbc21172a51c88525e050063929b2f9560209594937fd7e09655439c3932e55857df3220186e5a7f0980825f20691c2b35d941dee75b93608093965b865193845288840152858301526060820152a151908152a180f35b9050602094939294813d602011610693575b8161066060209383610b10565b810103126102ba5751929391927f82e577407245f8e8c446b39602dae3fffacbc21172a51c88525e050063929b2f6105d7565b3d9150610653565b84513d89823e3d90fd5b90919293949596979a5067ffffffffffffffff81116106cf578a525f999695949392919085610507565b856041857f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b89513d5f823e3d90fd5b509193928751947fdd62ed3e00000000000000000000000000000000000000000000000000000000865230818701527357891966931eb4bb6fb81430e6ce0a03aabde063938486880152868c818560209a8b935afa80156109e85789905f906109b7575b6107729250610c5d565b8a51888101917f095ea7b30000000000000000000000000000000000000000000000000000000083528789830152858201528481526080810167ffffffffffffffff8282108183111761098c5760c083019081118282101761098c578d528990527f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c656460a082015251610834918c918f915f91829182855af1903d15610983573d61082761081e82610b7e565b94519485610b10565b83523d5f8c85013e610d90565b8051888115918215610963575b50509050156102ba57869489948960c4958f8e519a8b998a987fe8b99b1b000000000000000000000000000000000000000000000000000000008a52890152870152850152621e8480606485015261032060848501527f00000000000000000000000000000000000000000000000000000000000000001660a48401525af1918215610959575f92610922575b50507f82e577407245f8e8c446b39602dae3fffacbc21172a51c88525e050063929b2f9560209594937fd7e09655439c3932e55857df3220186e5a7f0980825f20691c2b35d941dee75b9360809396610626565b9080925081969594963d8311610952575b61093d8183610b10565b810103126102ba5751929391928560206108ce565b503d610933565b85513d5f823e3d90fd5b83809293500103126102ba5787015180151581036102ba5780885f610841565b60609250610d90565b896041877f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b50508781813d83116109e1575b6109ce8183610b10565b810103126102ba57886107729151610768565b503d6109c4565b8b513d5f823e3d90fd5b50346102ba575f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126102ba576020905173ffffffffffffffffffffffffffffffffffffffff7f0000000000000000000000000000000000000000000000000000000000000000168152f35b50346102ba575f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126102ba57602090610a9a610bb8565b9051908152f35b6004359073ffffffffffffffffffffffffffffffffffffffff821682036102ba57565b346102ba575f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126102ba5760206040517332400084c286cf3e17e7b677ea9583e60a0003248152f35b90601f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0910116810190811067ffffffffffffffff821117610b5157604052565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b67ffffffffffffffff8111610b5157601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe01660200190565b6040517fb473318e0000000000000000000000000000000000000000000000000000000081523a6004820152621e8480602482015261032060448201526020816064817332400084c286cf3e17e7b677ea9583e60a0003245afa908115610c52575f91610c23575090565b90506020813d602011610c4a575b81610c3e60209383610b10565b810103126102ba575190565b3d9150610c31565b6040513d5f823e3d90fd5b91908201809211610c6a57565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b6040516020810181811067ffffffffffffffff821117610b51576040525f815290565b91908251928382525f5b848110610d025750507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f845f6020809697860101520116010190565b602081830181015184830182015201610cc4565b90808251908181526020809101926020808460051b8301019501935f915b848310610d445750505050505090565b9091929394958480610d80837fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe086600196030187528a51610cba565b9801930193019194939290610d34565b9015610daa57815115610da1575090565b3b156102ba5790565b5080519081156102ba57602001fdfea2646970667358221220c5378414d1f2b9695e47451caaf982870031b7462c48b456fbd125abe230ed0364736f6c63430008170033";
+    static readonly abi: readonly [{
+        readonly inputs: readonly [{
+            readonly internalType: "contract WETH9Interface";
+            readonly name: "_l1Weth";
+            readonly type: "address";
+        }, {
+            readonly internalType: "address";
+            readonly name: "_l2RefundAddress";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "nonpayable";
+        readonly type: "constructor";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: false;
+            readonly internalType: "address";
+            readonly name: "target";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "bytes";
+            readonly name: "message";
+            readonly type: "bytes";
+        }];
+        readonly name: "MessageRelayed";
+        readonly type: "event";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: false;
+            readonly internalType: "address";
+            readonly name: "l1Token";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "address";
+            readonly name: "l2Token";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "uint256";
+            readonly name: "amount";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "address";
+            readonly name: "to";
+            readonly type: "address";
+        }];
+        readonly name: "TokensRelayed";
+        readonly type: "event";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: false;
+            readonly internalType: "bytes32";
+            readonly name: "canonicalTxHash";
+            readonly type: "bytes32";
+        }];
+        readonly name: "ZkSyncMessageRelayed";
+        readonly type: "event";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "L1_GAS_TO_L2_GAS_PER_PUB_DATA_LIMIT";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "L2_GAS_LIMIT";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "getL1CallValue";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l1Weth";
+        readonly outputs: readonly [{
+            readonly internalType: "contract WETH9Interface";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "l2RefundAddress";
+        readonly outputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "target";
+            readonly type: "address";
+        }, {
+            readonly internalType: "bytes";
+            readonly name: "message";
+            readonly type: "bytes";
+        }];
+        readonly name: "relayMessage";
+        readonly outputs: readonly [];
+        readonly stateMutability: "payable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "l1Token";
+            readonly type: "address";
+        }, {
+            readonly internalType: "address";
+            readonly name: "l2Token";
+            readonly type: "address";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "amount";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "address";
+            readonly name: "to";
+            readonly type: "address";
+        }];
+        readonly name: "relayTokens";
+        readonly outputs: readonly [];
+        readonly stateMutability: "payable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "zkErc20Bridge";
+        readonly outputs: readonly [{
+            readonly internalType: "contract ZkBridgeLike";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "zkSyncEthBridge";
+        readonly outputs: readonly [{
+            readonly internalType: "contract ZkSyncInterface";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "zkSyncMessageBridge";
+        readonly outputs: readonly [{
+            readonly internalType: "contract ZkSyncInterface";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }];
+    static createInterface(): ZkSync_AdapterInterface;
+    static connect(address: string, signerOrProvider: Signer | Provider): ZkSync_Adapter;
+}
+export {};

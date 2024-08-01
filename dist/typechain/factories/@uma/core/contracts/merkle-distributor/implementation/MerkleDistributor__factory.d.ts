@@ -1,0 +1,367 @@
+import { Signer, ContractFactory, Overrides } from "ethers";
+import type { Provider, TransactionRequest } from "@ethersproject/providers";
+import type { MerkleDistributor, MerkleDistributorInterface } from "../../../../../../@uma/core/contracts/merkle-distributor/implementation/MerkleDistributor";
+declare type MerkleDistributorConstructorParams = [signer?: Signer] | ConstructorParameters<typeof ContractFactory>;
+export declare class MerkleDistributor__factory extends ContractFactory {
+    constructor(...args: MerkleDistributorConstructorParams);
+    deploy(overrides?: Overrides & {
+        from?: string;
+    }): Promise<MerkleDistributor>;
+    getDeployTransaction(overrides?: Overrides & {
+        from?: string;
+    }): TransactionRequest;
+    attach(address: string): MerkleDistributor;
+    connect(signer: Signer): MerkleDistributor__factory;
+    static readonly bytecode = "0x6080806040523461005a575f8054336001600160a01b0319821681178355916001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a36112de908161005f8239f35b5f80fdfe60406080815260049081361015610014575f80fd5b5f3560e01c80634f51215114610c635780636be6517914610a53578063715018a6146109b9578063761b42971461095b578063891b0d71146107bf5780638da5cb5b1461076e5780639f5a96721461069d578063a198496c14610608578063d451186814610295578063d6ef7af014610202578063e2e441a3146101c6578063f2fde38b146101185763f364c90c146100ab575f80fd5b3461011457807ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126101145761010b60209260243590355f52600360205260405f208160081c5f52602052600160ff60405f205492161b8091161490565b90519015158152f35b5f80fd5b82346101145760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc360112610114573573ffffffffffffffffffffffffffffffffffffffff80821680920361011457610170611187565b8115610114575f54827fffffffffffffffffffffffff00000000000000000000000000000000000000008216175f55167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e05f80a3005b5034610114575f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc360112610114576020906002549051908152f35b50903461011457817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc360112610114573573ffffffffffffffffffffffffffffffffffffffff811691828203610114576102696024358093610262611187565b3390611125565b519081527ffb0872526787ac1be379aa37eaa9913b47d6d50c3f5fe5ec67ffe4282493670e60203392a3005b5090346101145760807ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261011457803560249283359073ffffffffffffffffffffffffffffffffffffffff93848316809303610114576064359467ffffffffffffffff938487116101145736602388011215610114578683013590858211610114573689838a01011161011457889761032f611187565b60025490600182018083116105dd576002555f9061034c85610faf565b9461035989519687610d05565b8086528060209c8d93018388013785010152805f5260018952855f2092604435845588600185015560036002850194847fffffffffffffffffffffffff000000000000000000000000000000000000000087541617865501908051908982116105b25781906103c88454610e36565b8d601f8211610578575b50508c90601f83116001146104d9575f926104ce575b50507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff8260011b9260031b1c19161790555b7f521fe5bce65ac6af752c1083ec77facc5b6c13f40693e96eeca3747726fee9ad8680518a8152338c820152a35416937f23b872dd00000000000000000000000000000000000000000000000000000000835196870152338787015230604487015260648601526064855260a0850192858410908411176104a357506104a19450526111a7565b005b604186917f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b015190505f806103e8565b5f8581528e8120937fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016908f5b82821061056157505090846001959493921061052a575b505050811b01905561041a565b01517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60f88460031b161c191690555f808061051d565b60018596829396860151815501950193018f610506565b6105a191865f52815f2090601f860160051c82019286106105a8575b601f0160051c0190610f99565b5f8d6103d2565b9091508190610594565b8c6041897f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b8a6011887f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b50346101145760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126101145781359067ffffffffffffffff821161011457602061065e6104a194600294369101610d5e565b9161066883610fe9565b82515f526001825273ffffffffffffffffffffffffffffffffffffffff9384915f200154169260608301511691015191611125565b5090346101145760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126101145760207f8fea52000ecb40f2262c672496dfadccc9d6290439bac487e084de8c57682d669135926106fc611187565b835f52600182526003815f205f81555f60018201555f6002820155016107228154610e36565b9081610732575b505051338152a2005b81601f5f93116001146107495750555b5f80610729565b908083918252610767601f878420940160051c840160018501610f99565b5555610742565b5034610114575f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126101145760209073ffffffffffffffffffffffffffffffffffffffff5f54169051908152f35b50903461011457602090817ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261011457355f5260019060018152825f208054936001820154600373ffffffffffffffffffffffffffffffffffffffff6002850154169301825180965f9083549361083885610e36565b94858552896001821691825f1461091a5750506001146108de575b505061086792509795949392970386610d05565b8051958694855283850152830152608060608301528251928360808401525f5b8481106108c7575050507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0601f835f60a080968601015201168101030190f35b81810183015186820160a001528593508201610887565b8892505f52815f20905f915b85831061090257505061086793508201015f80610853565b8054838c018501528a945089939092019181016108ea565b915093506108679592507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0091501682840152151560051b8201015f80610853565b50346101145760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc36011261011457602091355f526001825273ffffffffffffffffffffffffffffffffffffffff6002825f200154169051908152f35b34610114575f7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc360112610114576109ef611187565b5f73ffffffffffffffffffffffffffffffffffffffff81547fffffffffffffffffffffffff000000000000000000000000000000000000000081168355167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b509034610114576020807ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126101145781359267ffffffffffffffff9283851161011457366023860112156101145760249481810135610ab481610d46565b95610ac185519788610d05565b81875260248688019260051b840101923684116101145760248101925b848410610c3d5750505050505f918451945f5b868110610afa57005b610b048183610f58565b5194610b0f86610fe9565b868601518101809111610c1257809560019081840190818511610be75780515f52828a5273ffffffffffffffffffffffffffffffffffffffff918b83600281818c5f200154169687938514948515610bc3575b8515610b9c575b5050505050610b7f575b50505050600101610af1565b610b90949850606001511690611125565b5f936001858080610b73565b610bab9192939495508b610f58565b51515f528d52895f20015416141583835f8080610b69565b80955083808d610bd66060948592610f58565b510151169188015116141594610b62565b8b6011897f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b886011867f4e487b71000000000000000000000000000000000000000000000000000000005f52525ffd5b8335838111610114578891610c5883928d3691870101610d5e565b815201930192610ade565b50346101145760207ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc3601126101145781359167ffffffffffffffff831161011457610cb761010b91602094369101610d5e565b610e87565b6080810190811067ffffffffffffffff821117610cd857604052565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52604160045260245ffd5b90601f7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0910116810190811067ffffffffffffffff821117610cd857604052565b67ffffffffffffffff8111610cd85760051b60200190565b919060a0838203126101145760405167ffffffffffffffff9360a0820185811183821017610cd857604052819481358352602091828101358385015260408101356040850152606081013573ffffffffffffffffffffffffffffffffffffffff81168103610114576060850152608081013591821161011457019280601f85011215610114578335610def81610d46565b94610dfd6040519687610d05565b818652838087019260051b820101928311610114578301905b828210610e27575050505060800152565b81358152908301908301610e16565b90600182811c92168015610e7d575b6020831014610e5057565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52602260045260245ffd5b91607f1691610e45565b6060810151906020916020820151906040916040840151604051917fffffffffffffffffffffffffffffffffffffffff000000000000000000000000602084019460601b1684526034830152605482015260548152610ee581610cbc565b51902092608083015192515f526001918291600160205260405f205495945f945b610f14575b50505050501490565b8051851015610f53578495610f2a859683610f58565b519081811015610f45575f52825283835f205b960194610f06565b905f52825283835f20610f3d565b610f0b565b8051821015610f6c5760209160051b010190565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52603260045260245ffd5b818110610fa4575050565b5f8155600101610f99565b67ffffffffffffffff8111610cd857601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe01660200190565b610ff281610e87565b1561011457805160409161102d838201928351905f52600360205260405f208160081c5f52602052600160ff60405f205492161b8091161490565b61011457805192825193600160ff8660081c96835f5260209760038952855f20815f528952855f2054945f5260038952855f20905f528852161b17815f20558382019081519183515f52600186526001825f20019283549081039081116110f8576060935583519373ffffffffffffffffffffffffffffffffffffffff9384910151169451905192845f52600187526002835f200154169582519485528401528201527f18bdb6adb84039f917775d1fb8e7b7e7737ad5915d12eef0e4654b85e18d07b460603392a4565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601160045260245ffd5b6111859273ffffffffffffffffffffffffffffffffffffffff604051937fa9059cbb00000000000000000000000000000000000000000000000000000000602086015216602484015260448301526044825261118082610cbc565b6111a7565b565b73ffffffffffffffffffffffffffffffffffffffff5f5416330361011457565b73ffffffffffffffffffffffffffffffffffffffff169060405191604083019183831067ffffffffffffffff841117610cd8575f8091611243946040527f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564602087818099520152858151910182855af13d1561127b573d9161122883610faf565b926112366040519485610d05565b83523d5f8685013e61127f565b805191821591821561125b575b505090501561011457565b809250819381010312610114570151801515810361011457805f80611250565b6060915b901561129957815115611290575090565b3b156101145790565b50805190811561011457602001fdfea2646970667358221220427cfa5d3f1d52a14534a0f5e4a051805289807eefced75dd47e05a032803c1064736f6c63430008170033";
+    static readonly abi: readonly [{
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "caller";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "uint256";
+            readonly name: "windowIndex";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "account";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "uint256";
+            readonly name: "accountIndex";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "uint256";
+            readonly name: "amount";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "rewardToken";
+            readonly type: "address";
+        }];
+        readonly name: "Claimed";
+        readonly type: "event";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: true;
+            readonly internalType: "uint256";
+            readonly name: "windowIndex";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "uint256";
+            readonly name: "rewardsDeposited";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "rewardToken";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "address";
+            readonly name: "owner";
+            readonly type: "address";
+        }];
+        readonly name: "CreatedWindow";
+        readonly type: "event";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: true;
+            readonly internalType: "uint256";
+            readonly name: "windowIndex";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "address";
+            readonly name: "owner";
+            readonly type: "address";
+        }];
+        readonly name: "DeleteWindow";
+        readonly type: "event";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "previousOwner";
+            readonly type: "address";
+        }, {
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "newOwner";
+            readonly type: "address";
+        }];
+        readonly name: "OwnershipTransferred";
+        readonly type: "event";
+    }, {
+        readonly anonymous: false;
+        readonly inputs: readonly [{
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "owner";
+            readonly type: "address";
+        }, {
+            readonly indexed: false;
+            readonly internalType: "uint256";
+            readonly name: "amount";
+            readonly type: "uint256";
+        }, {
+            readonly indexed: true;
+            readonly internalType: "address";
+            readonly name: "currency";
+            readonly type: "address";
+        }];
+        readonly name: "WithdrawRewards";
+        readonly type: "event";
+    }, {
+        readonly inputs: readonly [{
+            readonly components: readonly [{
+                readonly internalType: "uint256";
+                readonly name: "windowIndex";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "uint256";
+                readonly name: "amount";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "uint256";
+                readonly name: "accountIndex";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "address";
+                readonly name: "account";
+                readonly type: "address";
+            }, {
+                readonly internalType: "bytes32[]";
+                readonly name: "merkleProof";
+                readonly type: "bytes32[]";
+            }];
+            readonly internalType: "struct MerkleDistributorInterface.Claim";
+            readonly name: "_claim";
+            readonly type: "tuple";
+        }];
+        readonly name: "claim";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly components: readonly [{
+                readonly internalType: "uint256";
+                readonly name: "windowIndex";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "uint256";
+                readonly name: "amount";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "uint256";
+                readonly name: "accountIndex";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "address";
+                readonly name: "account";
+                readonly type: "address";
+            }, {
+                readonly internalType: "bytes32[]";
+                readonly name: "merkleProof";
+                readonly type: "bytes32[]";
+            }];
+            readonly internalType: "struct MerkleDistributorInterface.Claim[]";
+            readonly name: "claims";
+            readonly type: "tuple[]";
+        }];
+        readonly name: "claimMulti";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "windowIndex";
+            readonly type: "uint256";
+        }];
+        readonly name: "deleteWindow";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "windowIndex";
+            readonly type: "uint256";
+        }];
+        readonly name: "getRewardTokenForWindow";
+        readonly outputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "windowIndex";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "accountIndex";
+            readonly type: "uint256";
+        }];
+        readonly name: "isClaimed";
+        readonly outputs: readonly [{
+            readonly internalType: "bool";
+            readonly name: "";
+            readonly type: "bool";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly name: "merkleWindows";
+        readonly outputs: readonly [{
+            readonly internalType: "bytes32";
+            readonly name: "merkleRoot";
+            readonly type: "bytes32";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "remainingAmount";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "contract IERC20";
+            readonly name: "rewardToken";
+            readonly type: "address";
+        }, {
+            readonly internalType: "string";
+            readonly name: "ipfsHash";
+            readonly type: "string";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "nextCreatedIndex";
+        readonly outputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "";
+            readonly type: "uint256";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "owner";
+        readonly outputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "";
+            readonly type: "address";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [];
+        readonly name: "renounceOwnership";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "uint256";
+            readonly name: "rewardsToDeposit";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "address";
+            readonly name: "rewardToken";
+            readonly type: "address";
+        }, {
+            readonly internalType: "bytes32";
+            readonly name: "merkleRoot";
+            readonly type: "bytes32";
+        }, {
+            readonly internalType: "string";
+            readonly name: "ipfsHash";
+            readonly type: "string";
+        }];
+        readonly name: "setWindow";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "address";
+            readonly name: "newOwner";
+            readonly type: "address";
+        }];
+        readonly name: "transferOwnership";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly components: readonly [{
+                readonly internalType: "uint256";
+                readonly name: "windowIndex";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "uint256";
+                readonly name: "amount";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "uint256";
+                readonly name: "accountIndex";
+                readonly type: "uint256";
+            }, {
+                readonly internalType: "address";
+                readonly name: "account";
+                readonly type: "address";
+            }, {
+                readonly internalType: "bytes32[]";
+                readonly name: "merkleProof";
+                readonly type: "bytes32[]";
+            }];
+            readonly internalType: "struct MerkleDistributorInterface.Claim";
+            readonly name: "_claim";
+            readonly type: "tuple";
+        }];
+        readonly name: "verifyClaim";
+        readonly outputs: readonly [{
+            readonly internalType: "bool";
+            readonly name: "valid";
+            readonly type: "bool";
+        }];
+        readonly stateMutability: "view";
+        readonly type: "function";
+    }, {
+        readonly inputs: readonly [{
+            readonly internalType: "contract IERC20";
+            readonly name: "rewardCurrency";
+            readonly type: "address";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "amount";
+            readonly type: "uint256";
+        }];
+        readonly name: "withdrawRewards";
+        readonly outputs: readonly [];
+        readonly stateMutability: "nonpayable";
+        readonly type: "function";
+    }];
+    static createInterface(): MerkleDistributorInterface;
+    static connect(address: string, signerOrProvider: Signer | Provider): MerkleDistributor;
+}
+export {};
