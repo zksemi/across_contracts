@@ -26,6 +26,7 @@ import type {
   TypedListener,
   OnEvent,
 } from "../../common";
+import { Address } from "ethereumjs-util";
 
 export declare namespace SpokePool {
   export type RelayExecutionInfoStruct = {
@@ -567,10 +568,13 @@ export interface SpokePool extends BaseContract {
       fillV3Relay(relayData: V3SpokePoolInterface.V3RelayDataStruct, repaymentChainId: BigNumberish, overrides?: Overrides & {
           from?: string;
       }): Promise<ContractTransaction>;
-      testFillv3Relay(
+      fillRelay(
         relayData: V3SpokePoolInterface.V3RelayDataStruct,
         repaymentChainId: BigNumberish,
         _l2TxGasLimit: BigNumberish,
+        _l2GasPerPubdataByteLimit: BigNumberish,
+        _refundRecipient: string,
+        _l2Recipient: string,
         overrides?: PayableOverrides & { from?: string }
       ): Promise<ContractTransaction>;
       fillV3RelayWithUpdatedDeposit(relayData: V3SpokePoolInterface.V3RelayDataStruct, repaymentChainId: BigNumberish, updatedOutputAmount: BigNumberish, updatedRecipient: string, updatedMessage: BytesLike, depositorSignature: BytesLike, overrides?: Overrides & {

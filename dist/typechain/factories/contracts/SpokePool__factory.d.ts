@@ -1402,8 +1402,20 @@ export declare class SpokePool__factory {
             readonly internalType: "uint256";
             readonly name: "_l2TxGasLimit";
             readonly type: "uint256";
+        }, {
+            readonly internalType: "uint256";
+            readonly name: "_l2GasPerPubdataByteLimit";
+            readonly type: "uint256";
+        }, {
+            readonly internalType: "address";
+            readonly name: "_refundRecipient";
+            readonly type: "address";
+        }, {
+            readonly internalType: "address";
+            readonly name: "_l2Recipient";
+            readonly type: "address";
         }];
-        readonly name: "testFillv3Relay";
+        readonly name: "fillRelay";
         readonly outputs: readonly [];
         readonly stateMutability: "payable";
         readonly type: "function";
